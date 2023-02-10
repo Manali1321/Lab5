@@ -1,0 +1,17 @@
+extends layout 
+
+
+block main-content
+  h1 Popular shows
+  table
+    thead
+      tr 
+        th Show title
+        th Year
+    tbody
+      each s in summary
+        tr
+          td 
+            - url =`https://imdb.com/title/${s.ids.imdb}`
+            a(href = url) #{s.title}
+          td #{s.year}

@@ -1,0 +1,21 @@
+extends layout 
+
+
+block main-content 
+  //You can overwrite the main-content block by writing block content
+  //in the template file which is extending.
+  h1.page-title Hello!
+  //- Also add another page and attach popular show as in lab requirement.
+  table
+    thead
+      tr
+        th Show title
+        th Year
+    tbody
+      each s in shows
+        tr 
+          td
+            - url=`https://imdb.com/title/${s.show.ids.imdb}`
+            a(href= url) #{s.show.title}
+          td #{s.show.year}
+  
