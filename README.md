@@ -11,3 +11,5 @@ The Trakt API stuff is in the /modules/trakt folder.
 ## To run
 1. Modify the .env file values to ones which reflect your app settings.
 
+#Node.js #API #fetch
+
